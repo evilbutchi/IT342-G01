@@ -20,12 +20,6 @@ export async function loginUser({ username, password }) {
   return apiRequest('/login', { method: 'POST', body: { username, password } });
 }
 
-/**
- * Extracts a human-readable message from an error thrown by the calls above.
- * apiRequest() already normalizes both the backend's plain-text error bodies
- * and network/timeout failures into ApiError.message, so this mostly just
- * guards against a non-ApiError being thrown for some unexpected reason.
- */
 export function extractErrorMessage(error, fallback) {
   if (error instanceof ApiError && error.message) return error.message;
   return fallback;
