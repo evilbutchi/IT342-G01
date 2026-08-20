@@ -12,8 +12,7 @@ function readStoredUser() {
   }
 }
 
-// Strips the password out of whatever the backend returns so it never
-// touches component state, sessionStorage, or the console.
+
 function toSafeUser(user) {
   if (!user) return null;
   const { id, username, email } = user;
