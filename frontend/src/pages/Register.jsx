@@ -35,8 +35,6 @@ export default function Register() {
         email: form.email.trim(),
         password: form.password,
       });
-      // Clear the password out of local state immediately; it never needs
-      // to exist in memory once the request has been sent.
       setForm(EMPTY_FORM);
       navigate('/login', {
         state: { successMessage: 'Account created. You can now log in.' },
