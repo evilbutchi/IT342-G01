@@ -16,8 +16,6 @@ export default function Login() {
   const [serverError, setServerError] = useState('');
   const [submitting, setSubmitting] = useState(false);
 
-  // Carries the "account created" message over from the Register page,
-  // shown once and then cleared so a refresh doesn't repeat it.
   const [successMessage, setSuccessMessage] = useState(
     location.state?.successMessage || ''
   );
